@@ -25,16 +25,20 @@ dependencies {
     // Ktor
     // Use Netty as the embedded server.
     implementation("io.ktor:ktor-server-netty:$ktorVersion")
-    // We can create the HTML using KotlinX, although maybe
+    // Allows us to create HTML using a Kotlin DSL
     implementation("io.ktor:ktor-html-builder:$ktorVersion")
+    // Allows us to create CSS using a Kotlin DSL
+    implementation("org.jetbrains:kotlin-css-jvm:1.0.0-pre.116-kotlin-1.4.10")
     // Webjars are great (www.webjars.org), we can use client-side web libraries!
     implementation("io.ktor:ktor-webjars:$ktorVersion")
     // Use Gson for handling requests, if we ever have to
     implementation("io.ktor:ktor-gson:$ktorVersion")
 
     // Webjars
-    // Let's use Foundation (https://github.com/foundation/foundation-sites)
-    implementation("org.webjars.npm:foundation-sites:6.6.3")
+    // Let's use Bootstrap (https://getbootstrap.com/)
+    implementation("org.webjars:bootstrap:4.5.2")
+    // Let's use Bootstrap Icons (https://icons.getbootstrap.com/)
+    implementation("org.webjars.npm:bootstrap-icons:1.0.0")
 
     // Logging
     implementation("org.slf4j:slf4j-api:$slf4jVersion")
